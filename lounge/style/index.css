@@ -1,0 +1,20 @@
+body {
+    background-color: mediumaquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightslategray;
+}
+
+h1,
+h2 {
+    color: lightcoral;
+    font-family: sans-serif;
+
+}
+
+h1 {
+    border-bottom: solid black 1px;
+}
+
+p {
+    color: maroon;
+}

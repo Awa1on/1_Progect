@@ -1,0 +1,41 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: darkcyan;
+    background-color: antiquewhite;
+    line-height: 20px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: sans-serif;
+    color: brown;
+    font-weight: 300;
+    padding: 2%;
+    border: 2px solid rosybrown;
+
+}
+
+h1 {
+    border-bottom: solid black 1px;
+}
+
+p {
+    text-align: left;
+}
+
+p.greentea {
+    color: green;
+}
+
+p.lightblue {
+    color: purple;
+}
+
+p.blue {
+    color: blue;
+}
+
+p.red {
+    color: red;
+}
