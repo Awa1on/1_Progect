@@ -1,0 +1,48 @@
+body {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: small;
+    line-height: 150%;
+
+}
+
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 120%;
+}
+
+ul {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#warranty {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 130%;
+    line-height: 130%;
+    border: green dashed thick;
+    border-radius: 20px;
+    background-color: #a7cece;
+    padding: 25px 25px 25px 80px;
+    margin: 30px 150px 30px 150px;
+    background-image: url(../images/background.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
