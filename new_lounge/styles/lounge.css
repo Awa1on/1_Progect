@@ -28,9 +28,44 @@ h3 {
     font-size: 120%;
 }
 
-ul {
-    font-weight: bold;
+.cd {
     font-style: italic;
+}
+
+.artist {
+    font-weight: bold;
+}
+
+#elexirs {
+    line-height: 1;
+    width: 20%;
+    text-align: center;
+    float: right;
+    border: solid 1px #007e7e;
+    padding: 20px;
+    margin: 5% 0px 20px 20px;
+    background: url(../images/cocktail.gif) repeat-x;
+}
+
+#elexirs h3 {
+    color: #007e7e;
+}
+
+#elexirs h2 {
+    color: black;
+}
+
+#elexirs a:link {
+    color: red;
+}
+
+#elexirs a:visited {
+    color: violet;
+}
+
+#elexirs a:hover {
+    color: green;
+    background: #f88396;
 }
 
 #warranty {
@@ -41,8 +76,15 @@ ul {
     border-radius: 20px;
     background-color: #a7cece;
     padding: 25px 25px 25px 80px;
-    margin: 30px 150px 30px 150px;
+    margin: 30px 30% 30px 50px;
     background-image: url(../images/background.gif);
     background-repeat: no-repeat;
     background-position: top left;
+    text-align: center;
+}
+
+footer {
+    font: 50%/normal;
+    text-align: center;
+    margin-top: 30px;
 }
