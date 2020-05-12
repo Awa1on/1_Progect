@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Hello!</h1>
     <table border="1" cellspacing="0" cellpadding="10">
-        <thead>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Id</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Max</td>
-                <td>Strikun</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Lena</td>
-                <td>Golovach</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Miha</td>
-                <td>Bregnev</td>
-                <td>3</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <td colspan="3">It's a very important inforation</td>
-        </tfoot>
+      <thead>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Id</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Max</td>
+          <td>Strikun</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Lena</td>
+          <td>Golovach</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Miha</td>
+          <td>Bregnev</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="3">It's a very important inforation</td>
+      </tfoot>
     </table>
-
-</body>
-
+    <span>Hyper Hi</span>
+    <form action="index.html" method="POST">
+      <input type="text" name="Name" required value="Hans" />
+      <!-- required Поле обязательно к заполнению -->
+      <!-- value Значение поля по умолчанию -->
+      <!-- placeholder Значение поля по умолчанию но не требующее удаления -->
+      <input type="number" name="day" id="" placeholder="Введите день" />
+      <input type="email" name="email" id="" />
+      <input type="password" name="password" id="" />
+      <input type="date" name="yourdate" id="" />
+      <input type="time" name="" id="" />
+      <input type="datetime-local" name="currendatetime" id="" />
+      <input type="range" name="" id="" />
+      <input type="hidden" name="" value="" />
+      <input type="radio" name="emal" id="t1" />
+      <label for="t1">Email</label>
+      <input type="radio" name="emal" id="t2" />
+      <label for="t2">Phone</label>
+      <input type="radio" name="emal" id="t3" />
+      <label for="t3">Address</label><br />
+      <input type="checkbox" name="" id="s1" />
+      <label for="s1">Float</label>
+      <input type="checkbox" name="" id="s2" />
+      <label for="s2">Home</label>
+      <input type="submit" value="Send" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
 </html>
