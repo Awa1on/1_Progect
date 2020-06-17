@@ -62,5 +62,29 @@
       <input type="submit" value="Send" />
       <input type="reset" value="Reset" />
     </form>
+    <form action="index.html" method="POST">
+      <select name="country" id="country" size="2">
+        <option value="Usa">Usa</option>
+        <option value="Russia" selected>Russia</option>
+        <option value="Uk">Uk</option>
+        <option value="Brasil">Brasil</option>
+      </select>
+      <select name="land" id="land">
+        <optgroup value="0" label="central Russia">
+          <option value="Chel">Chel</option>
+          <option value="Ekb">Ekb</option>
+        </optgroup>
+        <optgroup value="0" label="north Russia">
+          <option value="Tuva">Tyva</option>
+          <option value="Saha">Saha</option>
+        </optgroup>
+      </select>
+      <textarea name="callback" id="callback" cols="30" rows="10"></textarea>
+      <input type="submit" value="Send" />
+    </form>
+    <iframe src="" frameborder="0" sandbox="allow-scripts">
+      <p>Ваш браузер не поддерживает iframe</p>
+    </iframe>
+    <object data="any.pdf" type=""></object>
   </body>
 </html>
