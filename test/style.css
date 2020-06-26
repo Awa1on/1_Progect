@@ -1,7 +1,21 @@
 body {
     /* background: url(flowers.jpg) no-repeat; */
-    width: 50%;
-    color: aquamarine;
+    /* width: 50%; */
+    /* color: aquamarine; */
     border: 2px solid green;
     font: Arial bold 1.2em italic;
+}
+/* a {
+    cursor: help;
+} */
+ul>li {
+display: inline;
+padding: 20px;
+background-color: rgb(61, 219, 100);
+font-weight: bold;
+border-bottom: solid red;
+}
+ul {
+    margin: 20px;
+    
 }
