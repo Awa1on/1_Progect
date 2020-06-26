@@ -5,24 +5,28 @@ body {
     border: 2px solid green;
     font: Arial bold 1.2em italic;
 }
+
 /* a {
     cursor: help;
 } */
 ul>li {
-display: inline;
-padding: 20px;
-background-color: rgb(61, 219, 100);
-font-weight: bold;
-border-bottom: solid red;
+    display: inline;
+    padding: 20px;
+    background-color: rgb(61, 219, 100);
+    font-weight: bold;
+    border-bottom: solid red;
 }
+
 ul {
     margin: 20px;
-    
+
 }
+
 p {
     background-color: rgba(143, 220, 180, 0.5);
     opacity: 0.8;
 }
+
 /* .lighter{
     padding: 50px;
     margin: 50px;
@@ -50,25 +54,98 @@ p {
     border-radius: 100px;
     width: 10px;
     border: 1px solid black;
-} */ 
+} */
 /* 1 variant */
-#first, #second, #third{
+.lighter {
+    background-color: powderblue;
+    border-radius: 10px;
+    width: 100px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.color {
     border: 1px solid black;
     border-radius: 50px;
     width: 100px;
     height: 100px;
+    margin-bottom: 10px;
 }
+
 #first {
     background-color: #ff0000;
 }
+
 #second {
     background-color: #ffff00;
 }
+
 #third {
     background-color: #00ff00;
 }
+
+.color+.color {
+    margin-top: 10px;
+}
+
 /* 2 variant */
 #head {
     font-size: 2.0em;
 }
+
 /* Селектор * применяет стили ко всем тегам сразу */
+[href="next.html"] {
+    font-style: italic;
+}
+
+/* Селектор по конкретному аттрибуту */
+p[title] {
+    font-style: italic;
+}
+
+/* Селектор по аттрибуту конкретного тега */
+[href*="ru"] {
+    background-color: blanchedalmond;
+}
+
+/* Селектор по приблезительному аттрибуту */
+[href^="https"] {
+    background-color: blue;
+}
+
+/* Селектор по началу значения аттрибута аттрибуту */
+[href$="https"] {
+    background-color: pink;
+}
+
+/* Селектор по концу значения аттрибута аттрибуту */
+[href~="https"] {
+    background-color: blue;
+}
+
+/* Селектор по слову через пробел аттрибуту */
+p[class="test"][title] {
+    background-color: plum;
+}
+
+div>p {
+    background-color: plum;
+}
+
+/* Селектор потомка а не вложенных элементов */
+span~p {
+    font-style: italic;
+}
+
+/* Селектор родственника селектору span а имменно p */
+.test~p {
+    font: italic;
+}
+
+/* Селектор родственника по отношению к классу  */
+li+li {
+    margin: 50px;
+}
+
+/* Селектор соседа */
