@@ -26,7 +26,7 @@
 }
 
 #div-a {
-    background-color: grey;
+    background-color: lightgray;
     float: right;
     /* position: absolute;
     top: 20px;
@@ -54,4 +54,20 @@
     height: 100px;
     margin-bottom: 20px;
     width: 200px;
+}
+
+#div-a {
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .6),
+        23px 0 20px -23px rgba(0, 0, 0, .6),
+        inset 0 0 40px rgba(0, 0, 0, .1); */
+    /* Эффект свернутой бумаги */
+    /* box-shadow: 0 0 0 7px rgb(118, 46, 177),
+        0 0 0 14px rgba(118, 80, 105, .5),
+        0 0 0 21px rgba(185, 150, 46, .3); */
+    /* Тройная рамка */
+    box-shadow: -20px 20px 0 -17px #eee,
+    20px -20px 0 -17px #eee,
+    20px 20px 0 -20px #592385,
+    0 0 0 2px #592385;
+
 }
