@@ -52,6 +52,7 @@
 #footer {
     background-color: yellow;
     height: 100px;
+    margin-top: 20px;
     margin-bottom: 20px;
     width: 200px;
 }
@@ -65,9 +66,104 @@
         0 0 0 14px rgba(118, 80, 105, .5),
         0 0 0 21px rgba(185, 150, 46, .3); */
     /* Тройная рамка */
-    box-shadow: -20px 20px 0 -17px #eee,
-    20px -20px 0 -17px #eee,
-    20px 20px 0 -20px #592385,
-    0 0 0 2px #592385;
+    box-shadow: -20px 20px 0 -17px #eee, 20px -20px 0 -17px #eee,
+        20px 20px 0 -20px #592385, 0 0 0 2px #592385;
+}
 
+a {
+    font-weight: bold;
+    padding: 10px;
+    color: green;
+    background-color: red;
+    border: 1px solid black;
+}
+
+a:visited {
+    color: rosybrown;
+    background-color: seagreen;
+    border: 1px solid yellow;
+}
+
+a:hover {
+    color: blueviolet;
+    background-color: chartreuse;
+    border: 1px solid red;
+}
+
+form {
+    margin: 30px 10px;
+}
+
+.forminput {
+    border: 1px solid gainsboro;
+    padding: 5px;
+}
+
+.forminput:focus {
+    background: gold;
+    border-color: green;
+}
+
+li:nth-child(2n-1) {
+    background-color: lightgreen;
+}
+
+li:nth-child(2n) {
+    background-color: lightsalmon;
+}
+
+li:first-child {
+    background-color: hotpink;
+}
+
+li:last-child {
+    background-color: khaki;
+}
+
+.lighter {
+    border: 1px solid black;
+    border-radius: 10px;
+    background: cadetblue;
+    padding: 10px;
+    width: 100px;
+}
+
+.circle {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.circle+.circle {
+    margin-top: 10px;
+}
+
+.red {
+    background: #ff0000;
+}
+
+.yellow {
+    background: #ffff00;
+}
+
+.green {
+    background: #00ff00;
+}
+
+.red:hover,
+.green:hover,
+.yellow:hover {
+    background: #000000;
+}
+[class^="off"]{
+    background-color: #000;
+}
+.offred:hover{
+    background-color: #ff0000;
+}
+.offyellow:hover{
+    background-color: #ffff00;
+}
+.offgreen:hover{
+    background-color: #00ff00;
 }
