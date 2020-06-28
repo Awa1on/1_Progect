@@ -1,3 +1,30 @@
+a {
+  font-size: 40px;
+  border: 2px solid #ccc;
+}
 body {
   background: red;
+}
+p {
+  font-size: 32px;
+}
+.navigation {
+  height: 50px;
+}
+#navigation {
+  width: 100px;
+}
+.header-navigation {
+  background: red;
+}
+body {
+  background-image: url("../img/les.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body h1 {
+  background-color: blue;
+}
+div::before {
+  content: "Это текст";
 }

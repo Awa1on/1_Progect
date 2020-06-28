@@ -1,3 +1,53 @@
+@fontSize: 40px;
+@border: 2px solid #ccc;
+@property: background;
+@color: color;
+@nav: navigation;
+@img: "../img/";
+
+@var: "Это текст";
+@var1: "var"; // Переменная через переменную
+@bgc: blue;
+
+a {
+    font-size: @fontSize;
+    border: @border;
+}
+
 body {
     background: red;
+}
+
+p {
+    font-size: @fontSize*0.8;
+}
+
+.@{nav} {
+    height: 50px;
+}
+
+// Конструктор класса через переменную
+#@{nav} {
+    width: 100px;
+}
+
+// Конструктор ид через переменную
+.header-@{nav} {
+    background: red;
+}
+
+// Конструктор сложного класса
+body {
+    background-image: url("@{img}les.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // @{property}-@{color}:red;
+    h1 {
+        background-color: @bgc;
+    }
+}
+
+div::before {
+    content: @@var1;
 }
