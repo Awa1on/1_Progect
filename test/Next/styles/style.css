@@ -1,0 +1,188 @@
+/* 1 color #fef4a9 (Желто-золотой) Фон
+    2 color #3b9a9c (Темно - синезеленый) Заголовки
+    3 color #4bc2c5 (Средне - синезеленый) Текст
+    4 color #78fee0 (Светлый синезеленый) Рамки, тени
+ */
+body {
+    background: #fef4a9;
+    color: #4bc2c5;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #3b9a9c;
+}
+
+nav {
+    text-align: center;
+    background-color: #78fee0;
+    padding: 20px 0px;
+    border-bottom: 2px solid #3b9a9c;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fef4a9;
+    font-size: 20px;
+}
+
+
+nav li {
+    display: inline;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 2px solid darkgreen;
+    background-color: #4bc2c5;
+    border-radius: 15px;
+}
+
+.active,
+nav li:hover {
+    display: inline;
+    padding: 15px 15px 15px 15px;
+    background-color: #3b9a9c;
+    border-radius: 15px;
+}
+
+nav li+li {
+    margin-left: 60px;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.welcome p {
+    font-size: 20px;
+}
+
+img {
+    border: 2px solid #78fee0;
+    border-radius: 10px;
+    box-shadow: 6px 8px 9px 3px rgba(59, 154, 156, 0.79);
+    -webkit-box-shadow: 6px 8px 9px 3px rgba(59, 154, 156, 0.79);
+    -moz-box-shadow: 6px 8px 9px 3px rgba(59, 154, 156, 0.79)
+}
+
+/* .step-two {
+    float: left;
+}
+
+.client {
+    float: right;
+} */
+.step-two {
+    margin-left: 20px;
+}
+
+.step-two table {
+    border: 1px solid violet;
+    width: 400px;
+    text-align: center;
+}
+
+.step-two table th,
+td {
+    border: 1px solid violet;
+}
+
+.step-two div {
+    float: right;
+    margin-top: -200px;
+    margin-right: 100px;
+}
+
+.step-two ol li:last-child {
+    font-weight: bold;
+    color: #3b9a9c;
+    font-size: 20px;
+}
+
+.separator {
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: 2px solid #3b9a9c;
+}
+
+
+.client {
+    display: table;
+    text-align: center;
+    margin: 20px 30%;
+}
+
+#client {
+    text-align: center;
+}
+
+/* .client h2 {
+    display: table-row;
+} */
+
+.client div {
+    display: table-row;
+}
+
+.client div div {
+    display: table-cell;
+}
+
+.email {
+    text-align: center;
+}
+
+.email input[type="email"] {
+    height: 30px;
+    width: 250px;
+    border: 2px solid #78fee0;
+    padding: 5px;
+    background: #4bc2c5;
+    color: #fef4a9;
+    font-size: 20px;
+}
+
+
+
+.email input[type="submit"] {
+    height: 30px;
+    border: 2px solid #3b9a9c;
+    background: #4bc2c5;
+    color: #fef4a9;
+    border-radius: 5px;
+}
+
+.email input[type="submit"]:hover {
+    border: 2px solid #4bc2c5;
+    background: #3b9a9c;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    color: #3b9a9c;
+    background: #78fee0;
+    border-top: 2px solid #3b9a9c;
+    margin-top: 20px;
+}
+
+footer p {
+    display: inline;
+    padding: 20px 20px 0px 20px;
+
+}
+
+footer a {
+    color: #4bc2c5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3b9a9c;
+    text-decoration: underline;
+}
