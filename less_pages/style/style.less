@@ -1,53 +1,82 @@
-@fontSize: 40px;
-@border: 2px solid #ccc;
-@property: background;
-@color: color;
-@nav: navigation;
-@img: "../img/";
+// @fontSize: 40px;
+// @border: 2px solid #ccc;
+// @property: background;
+// @color: color;
+// @nav: navigation;
+// @img: "../img/";
 
-@var: "Это текст";
-@var1: "var"; // Переменная через переменную
-@bgc: blue;
+// @var: "Это текст";
+// @var1: "var"; // Переменная через переменную
+// @bgc: blue;
 
-a {
-    font-size: @fontSize;
-    border: @border;
-}
+// a {
+//     font-size: @fontSize;
+//     border: @border;
+// }
 
-body {
-    background: red;
-}
+// body {
+//     background: red;
+// }
 
-p {
-    font-size: @fontSize*0.8;
-}
+// p {
+//     font-size: @fontSize*0.8;
+// }
 
-.@{nav} {
-    height: 50px;
-}
+// .@{nav} {
+//     height: 50px;
+// }
 
-// Конструктор класса через переменную
-#@{nav} {
-    width: 100px;
-}
+// // Конструктор ид через переменную
+// #@{nav} {
+//     width: 100px;
+// }
 
-// Конструктор ид через переменную
-.header-@{nav} {
-    background: red;
-}
+// // Конструктор класса через переменную
+// .header-@{nav} {
+//     background: red;
+// }
 
-// Конструктор сложного класса
-body {
-    background-image: url("@{img}les.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+// // Конструктор сложного класса
+// body {
+//     background-image: url("@{img}les.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
 
-    // @{property}-@{color}:red;
-    h1 {
-        background-color: @bgc;
+//     // @{property}-@{color}:red;
+//     h1 {
+//         background-color: @bgc;
+//     }
+// }
+
+// div::before {
+//     content: @@var1;
+// }
+// @font1: 18px;
+// @font2: 14px;
+
+// body {
+//     font-size: @font1;
+
+//     ul {
+//         font-size: @font2;
+//     }
+// }
+@color1: red;
+@color2: green;
+@color3: yellow;
+
+.color {
+    color: @color1;
+
+    .text {
+        color: @color2;
+
+        a {
+            background: @color3;
+        }
     }
-}
 
-div::before {
-    content: @@var1;
+    .error{
+        background: @color1;
+    }
 }
