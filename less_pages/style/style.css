@@ -1,12 +1,4 @@
-.color {
-  color: red;
-}
-.color .text {
-  color: green;
-}
-.color .text a {
-  background: yellow;
-}
-.color .error {
-  background: red;
+.nav:before,
+.navigation:before {
+  content: "Hi!";
 }

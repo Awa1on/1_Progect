@@ -61,22 +61,106 @@
 //         font-size: @font2;
 //     }
 // }
-@color1: red;
-@color2: green;
-@color3: yellow;
 
-.color {
-    color: @color1;
+// @color1: red;
+// @color2: green;
+// @color3: yellow;
 
-    .text {
-        color: @color2;
+// .color {
+//     color: @color1;
 
-        a {
-            background: @color3;
-        }
-    }
+//     .text {
+//         color: @color2;
 
-    .error{
-        background: @color1;
+//         a {
+//             background: @color3;
+//         }
+//     }
+
+//     .error{
+//         background: @color1;
+//     }
+// }
+// & Родительский селектор
+
+//Двойной родитель
+// .nav{
+//     a {
+//         text-decoration: none;
+//         color: #000;
+
+//         &:hover {
+//             color: red;
+//         }
+
+//         &>span {
+//             color: green;
+//         }
+
+//         &:before {
+//             content: "Link here!";
+//         }
+
+//         &::after {
+//             content: "Out of link";
+//         }
+//     }
+// }
+
+// Расширение класса
+// .input {
+//     color: #000;
+
+//     &-error {
+//         color: #f00;
+//     }
+
+//     &-success {
+//         color: #0f0;
+//     }
+// }
+
+// Двойное использование
+// .btn {
+//     color: #fff;
+
+//     &+& {
+//         color: #0f0;
+//     }
+
+//     &>& {
+//         color: #00f;
+//     }
+
+//     && {
+//         color: #f00;
+//     }
+
+//     &,
+//     &-green {
+//         color: #ff0;
+//     }
+// }
+
+// Обратное использование
+// .nav {
+//     .menu {
+//         color: #f00;
+//         background: #ff0;
+
+//         .home & {
+//             color: #0f0;
+//             background: #0ff;
+//         }
+//     }
+
+
+// }
+
+// Обработка родительского селектора через ,
+.nav,
+.navigation {
+    &:before {
+        content: "Hi!";
     }
 }
