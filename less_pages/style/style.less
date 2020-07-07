@@ -243,34 +243,47 @@
 
 // Примеси с параметрами
 
-.transition(@prop: all, @time: 0.2s, @effect: linear) {
-    // Через : указано значение по умолчанию
+// .transition(@prop: all, @time: 0.2s, @effect: linear) {
+//     // Через : указано значение по умолчанию
 
-    transition: @prop @time @effect;
-}
+//     transition: @prop @time @effect;
+// }
 
-.cls1 {
-    .transition(width, 0.5s, linear);
-}
+// .cls1 {
+//     .transition(width, 0.5s, linear);
+// }
 
-.cls2 {
-    .transition(background, 2.5s, linear);
-}
+// .cls2 {
+//     .transition(background, 2.5s, linear);
+// }
 
-.cls3 {
-    .transition(@effect: easy);
-}
+// .cls3 {
+//     .transition(@effect: easy);
+// }
 
-// Перегрузка примесей
-.mixin(@color: #ccc) {
-    color: @color;
-}
+// // Перегрузка примесей
+// .mixin(@color: #ccc) {
+//     color: @color;
+// }
 
-.mixin(@color: red, @font-size: 18px) {
-    color: @color;
-    font-size: @font-size;
-}
+// .mixin(@color: red, @font-size: 18px) {
+//     color: @color;
+//     font-size: @font-size;
+// }
 
-.cls {
-    .mixin(green, 10px); // Переопределяем значение параметров примеси
-}
+// .cls {
+//     .mixin(green, 10px); // Переопределяем значение параметров примеси
+// }
+
+// Иморт сторонних файлов в 1 очредь стилей (другие файлы будут обрабатываться как less файлы)
+@import "costom";
+@import "costom.less"; // Одно и тоже 
+@import "costom.php";
+
+// Ключевы слова
+//@import  keywords"costom.less";
+@import(reference) "costom.less"; // Подключен но не используется можно использовать только примеси!
+@import(less) "costom.less"; // обрабатывается как Less
+@import(css) "costom.less"; //обрабатывается как css
+@import(once) "costom.less";// Подключтиться только 1 раз
+@import(multiple) "costom.less";// Подкличиться много раз
