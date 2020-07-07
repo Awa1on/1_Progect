@@ -178,25 +178,99 @@
 
 // =.link-btn:extend(.btn all) Также важен порядок стилей
 
-.btn {
+// .btn {
 
-    div & {
-        color: #000000;
-        font-size: 16px;
-        font-weight: 700;
-    }
-}
+//     div & {
+//         color: #000000;
+//         font-size: 16px;
+//         font-weight: 700;
+//     }
+// }
 
-.btn-error {
-    color: red;
-}
+// .btn-error {
+//     color: red;
+// }
 
-// Наследование стиля многими класами
-.link-btn,
-.link-btn-success,
-.link-btn-danger,
-#test {
-    &:extend(.btn all);
-}
+// // Наследование стиля многими класами
+// .link-btn,
+// .link-btn-success,
+// .link-btn-danger,
+// #test {
+//     &:extend(.btn all);
+// }
 
 // !!Важен порядок наследование в конце после родителя
+
+// Примиси - Миксины
+
+// .nav {
+//     font-style: italic;
+//     font-weight: bold;
+//     color: red;
+//     font-size: 18px;
+// }
+
+// #navigation {
+//     background: blue;
+
+// }
+
+// ul {
+//     #navigation;
+//     .nav();
+//     border: 2px solid red;
+// }
+
+// .nav {
+//     .btn {
+//         font-size: 20px;
+//         font-family: Arial, Helvetica, sans-serif;
+//         font-weight: bold;
+//         color: #000;
+//         background: #0ff;
+
+//         &:hover {
+//             background: yellow;
+//             font-size: 24px;
+//         }
+//     }
+// }
+
+
+// .link-btn {
+//     .nav .btn !important; // Примениться в 1 очередь игнорирую порядок и следование
+// } Вложенная примесь
+
+// Примеси с параметрами
+
+.transition(@prop: all, @time: 0.2s, @effect: linear) {
+    // Через : указано значение по умолчанию
+
+    transition: @prop @time @effect;
+}
+
+.cls1 {
+    .transition(width, 0.5s, linear);
+}
+
+.cls2 {
+    .transition(background, 2.5s, linear);
+}
+
+.cls3 {
+    .transition(@effect: easy);
+}
+
+// Перегрузка примесей
+.mixin(@color: #ccc) {
+    color: @color;
+}
+
+.mixin(@color: red, @font-size: 18px) {
+    color: @color;
+    font-size: @font-size;
+}
+
+.cls {
+    .mixin(green, 10px); // Переопределяем значение параметров примеси
+}
