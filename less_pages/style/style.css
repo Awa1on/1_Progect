@@ -1,4 +1,14 @@
-.nav:before,
-.navigation:before {
-  content: "Hi!";
+div .btn,
+div .link-btn,
+div .link-btn-success,
+div .link-btn-danger,
+div #test {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+}
+.btn-error,
+.link-btn:hover,
+.link-btn {
+  color: red;
 }

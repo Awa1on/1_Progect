@@ -158,9 +158,45 @@
 // }
 
 // Обработка родительского селектора через ,
-.nav,
-.navigation {
-    &:before {
-        content: "Hi!";
+// .nav,
+// .navigation {
+//     &:before {
+//         content: "Hi!";
+//     }
+// }
+
+//Наследование стилей
+.link-btn {
+    &:extend(.btn);
+}
+
+// Альтернативный вызов наследования стилей
+
+.link-btn:hover:extend(.btn-error):extend(.btn) {}
+
+.link-btn:extend(.btn, .btn-error) {}
+
+// =.link-btn:extend(.btn all) Также важен порядок стилей
+
+.btn {
+
+    div & {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 700;
     }
 }
+
+.btn-error {
+    color: red;
+}
+
+// Наследование стиля многими класами
+.link-btn,
+.link-btn-success,
+.link-btn-danger,
+#test {
+    &:extend(.btn all);
+}
+
+// !!Важен порядок наследование в конце после родителя
