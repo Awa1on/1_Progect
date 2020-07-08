@@ -1,0 +1,12 @@
+p {
+  background: #f3c;
+}
+p:hover {
+  background: #ff3377;
+}
+p::before {
+  content: "JS is a beautiful think";
+}
+p {
+  font-size: 19;
+}
