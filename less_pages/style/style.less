@@ -288,26 +288,48 @@
 // @import(once) "costom.less";// Подключтиться только 1 раз
 // @import(multiple) "costom.less";// Подкличиться много раз
 
-@color: #f3c;
+// @color: #f3c;
+
+// p {
+//     background: @color;
+// }
+
+// p:hover {
+//     //background: lighten(@color, 10);
+//     //background: darken(@color, 25);
+//     background: spin(@color, 25); // Отклонение по тону(по кругу цветов)
+// }
+
+// @string: "В этот день %S  произошел переворот в мире ИТ! А имменно %a";
+// @date: "(28.04.1993)";
+// @message: 'Programming HTML!';
+
+// p::before {
+//     //content: %(@string, @date, @message); Подстановка данных переменных вместо условных знаков
+//     content: replace("Web is a beautiful think", "Web", "JS");
+// }
+// p{
+//     font-size: ceil(18.5); // 18px
+// }
+// @color1:10;
+// .mixin(@value) when  (@value>0) and (@value <100){ // and = ,
+//     color: #f3c;
+// }
+// .block{
+//     .mixin(@color1);
+// }
+
+@font1: 100px;
+@font2: 20px;
+
+.mixin(@a, @b) when (@a>@b) {
+    font-size: @a;
+}
+
+.mixin(@a, @b) when (default()) {
+    font-size: @b;
+}
 
 p {
-    background: @color;
-}
-
-p:hover {
-    //background: lighten(@color, 10);
-    //background: darken(@color, 25);
-    background: spin(@color, 25); // Отклонение по тону(по кругу цветов)
-}
-
-@string: "В этот день %S  произошел переворот в мире ИТ! А имменно %a";
-@date: "(28.04.1993)";
-@message: 'Programming HTML!';
-
-p::before {
-    //content: %(@string, @date, @message); Подстановка данных переменных вместо условных знаков
-    content: replace("Web is a beautiful think", "Web", "JS");
-}
-p{
-    font-size: ceil(18.5); // 18px
+    .mixin(@font1, @font2);
 }
