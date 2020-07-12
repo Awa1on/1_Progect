@@ -1,7 +1,7 @@
 var x = 10;
 document.write(x);
 var srt1 = "Hello, ",
-  str2 = "World!";
+    str2 = "World!";
 document.write("<h2>Holla!</h2>");
 var h1 = "<h1>Super!</h1>";
 document.write(h1);
@@ -48,23 +48,23 @@ document.write("<p>Gender: <b>" + gender + "</b></p>");
 // document.write(person.age);
 
 function person(name, age, color, height) {
-  this.name = name;
-  this.age = age;
-  this.color = color;
-  this.height = height;
-  this.changeName = function (name) {
     this.name = name;
-  }; // 1 метод объявления функции
-  this.yearofBirth = bornYear; // 2 способ
-  this.writeName = writeName;
+    this.age = age;
+    this.color = color;
+    this.height = height;
+    this.changeName = function (name) {
+        this.name = name;
+    }; // 1 метод объявления функции
+    this.yearofBirth = bornYear; // 2 способ
+    this.writeName = writeName;
 }
 
 function bornYear() {
-  return 2020 - this.age; // 2 способ
+    return 2020 - this.age; // 2 способ
 }
 
 function writeName() {
-  document.write(this.name);
+    document.write(this.name);
 }
 
 var p1 = new person("Max", 22, "green", 184);
@@ -87,3 +87,28 @@ pers["name"] = "Max";
 pers["age"] = 32; // Now it's object not array.
 document.write(pers["age"]);
 // person.age=person['age'] or person["age"]
+
+//Math
+document.write("<h1>" + Math.PI + "</h1>");
+document.write("<h1>" + Math.LOG10E + "</h1>");
+document.write("<h1>" + Math.sqrt(16) + "</h1>");
+document.write("<h1>" + Math.ceil(Math.random() * 10) + "</h1>");
+
+// Date
+// function myAlert() {
+//     alert("Hi!");
+// }
+// setInterval(myAlert, 3000);
+var d1 = new Date(86400000);
+var d2 = new Date("January 2, 2020 10:32:00");
+var d3 = new Date(92, 2, 26, 04, 20, 0, 0);
+var d4 = new Date();
+
+function printTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var secs = d.getSeconds();
+    document.body.innerHTML = hours + ":" + mins + ":" + secs;
+}
+setInterval(printTime, 1000); //timer
