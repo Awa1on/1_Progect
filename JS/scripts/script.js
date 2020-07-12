@@ -1,7 +1,7 @@
 var x = 10;
 document.write(x);
 var srt1 = "Hello, ",
-    str2 = "World!";
+  str2 = "World!";
 document.write("<h2>Holla!</h2>");
 var h1 = "<h1>Super!</h1>";
 document.write(h1);
@@ -32,7 +32,41 @@ document.write("<p>Gender: <b>" + gender + "</b></p>");
 */
 
 //Калькулятор
-var x= prompt("Please, input x:");
-var y= prompt("Please, input y:");
-x=+x;
-y=+y;
+// var x= prompt("Please, input x:");
+// var y= prompt("Please, input y:");
+// x=+x;
+// y=+y;
+
+// Object's
+
+// var person = {
+//   name: "John",
+//   age: 21,
+//   favColor: "blue",
+//   height: 198,
+// }; // Создание 1 объекта через литерал , только для одиночных объектов.
+// document.write(person.age);
+
+function person(name, age, color, height) {
+  this.name = name;
+  this.age = age;
+  this.color = color;
+  this.height = height;
+  this.changeName = function (name) {
+    this.name = name;
+  }; // 1 метод объявления функции
+  this.yearofBirth = bornYear; // 2 способ
+  this.writeName = writeName;
+}
+function bornYear() {
+  return 2020 - this.age; // 2 способ
+}
+function writeName() {
+  document.write(this.name);
+}
+
+var p1 = new person("Max", 22, "green", 184);
+var p2 = new person("Andrey", 23, "red", 156);
+p1.changeName("John");
+document.write(p1.name);
+p2.writeName();
