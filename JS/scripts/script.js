@@ -58,9 +58,11 @@ function person(name, age, color, height) {
   this.yearofBirth = bornYear; // 2 способ
   this.writeName = writeName;
 }
+
 function bornYear() {
   return 2020 - this.age; // 2 способ
 }
+
 function writeName() {
   document.write(this.name);
 }
@@ -70,3 +72,18 @@ var p2 = new person("Andrey", 23, "red", 156);
 p1.changeName("John");
 document.write(p1.name);
 p2.writeName();
+
+// Arrays
+var courses = new Array("JS", "Html", "Css", "Java", "C++"); // 1 способ создания массива
+var course = courses[0];
+var courses1 = new Array(3); // 2 способ создания массива
+courses1[0] = "Php";
+courses1[1] = "C";
+courses1[2] = "Kotlin";
+courses1[3] = "Ruby";
+var courses2 = courses1.concat(courses);
+var pers = []; // empty array
+pers["name"] = "Max";
+pers["age"] = 32; // Now it's object not array.
+document.write(pers["age"]);
+// person.age=person['age'] or person["age"]
