@@ -18,3 +18,23 @@ p {
     /* top: 0px;
     left: 0px; */
 }
+
+img {
+    width: 1200px;
+    height: 400px;
+}
+
+#slider {
+    align-items: center;
+    text-align: center;
+}
+
+#next {
+    float: right;
+    margin-top: 12%;
+}
+
+#prev {
+    float: left;
+    margin-top: 12%;
+}

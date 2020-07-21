@@ -165,8 +165,43 @@ but.onclick = function () {
   but.parentElement.replaceChild(p, but);
   p.appendChild(butBack);
 };
-butBack.onclick=function(){
+butBack.onclick = function () {
   butBack.parentElement.removeChild(butBack);
   p.parentElement.removeChild(p);
   document.body.appendChild(but);
+};
+
+// Slider
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+var image = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"];
+var num = 0;
+next.onclick = function () {
+  var slider = document.getElementById("test");
+  num++;
+  if (num >= image.length) {
+    num = 0;
+  }
+  slider.src = image[num];
+};
+prev.onclick = function () {
+  var slider = document.getElementById("test");
+  num--;
+  if (num < 0) {
+    num = image.length - 1;
+  }
+  slider.src = image[num];
+};
+
+// Validate
+function validate() {
+  var n1 = document.getElementById("num1");
+  var n2 = document.getElementById("num2");
+  if (n1.value != "" && n2.value != "") {
+    if (n1.value == n2.value) {
+      return true;
+    }
+  }
+  alert("The value should be equal and blank!");
+  return false;
 }
