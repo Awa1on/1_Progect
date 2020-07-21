@@ -25,16 +25,17 @@ img {
 }
 
 #slider {
+    display: flex;
     align-items: center;
     text-align: center;
 }
 
 #next {
     float: right;
-    margin-top: 12%;
+
 }
 
 #prev {
     float: left;
-    margin-top: 12%;
+
 }
