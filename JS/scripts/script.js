@@ -144,6 +144,7 @@
 //Animation
 var pos = 0;
 var box = document.getElementById("box");
+
 function move() {
   if (pos >= 150) {
     clearInterval(t);
@@ -205,3 +206,153 @@ function validate() {
   alert("The value should be equal and blank!");
   return false;
 }
+
+
+// var, let, const
+// const нельзя переопределять
+let name = "David";
+let msg = `Welcome ${name}`;
+console.log(msg);
+let a = 9;
+let b = 10;
+let sum = `The sum is ${a+b}`;
+console.log(sum);
+
+// Циклы в Ecma2015
+let obj = {
+  a: 1,
+  b: 2,
+  c: 3
+}
+for (let x in obj) {
+  console.log(x);
+}
+let list = ["x", "y", "z"];
+for (let x of list) {
+  console.log(x);
+}
+for (let x of "Full Time Job") {
+  console.log(x);
+}
+
+// Function in JS6
+const add = (x, y) => {
+  let sum = x + y;
+  console.log(sum);
+}
+add(2, 4);
+const welcome = x => "Welcome " + x;
+console.log(welcome("Max"));
+const x = () => console.log("Hi!");
+x();
+var arr = [1, 2, 4, 6]; //= const arr = [1,2,4,6]
+arr.forEach(v => {
+  console.log(v * 2);
+}); // =arr.forEach(function(el){console.log(el*2);});
+const test = (a, b = 10, c = 22) => { // b и с значения по умолчанию
+  return a + b + c;
+}
+console.log(test(2, 2, 3));
+
+// object in js6
+let tree = {
+  height: 10,
+  color: "green",
+  age: 240,
+  grow() {
+    this.height += 2;
+    this.age += 10;
+  }
+};
+tree.grow();
+console.log(tree.height, tree.age);
+
+//alternative obj
+let height = 165;
+let weight = 66;
+let alternate = {
+  height,
+  weight
+};
+
+// вычисляемые значения
+let prop = 'name';
+let id = '1234';
+let mobile = '890012312';
+let user = {
+  [prop]: "Ban",
+  [`user_${id}`]: `${mobile}`
+};
+var i = 0;
+var ama = {
+  [`foo` + ++i]: i,
+  [`foo` + ++i]: i,
+  [`foo` + ++i]: i
+};
+var param = 'size';
+var config = {
+  [param]: 12,
+  [`mobile` + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+};
+console.log(config);
+
+// Object.assign ES6
+let person = {
+  name: "Karl",
+  age: 22,
+  sex: 'male'
+}; // Исходник для создания подобных объектов (рыба)
+let student = {
+  name: 'Brain',
+  age: 20,
+  xp: 3
+};
+let newStudent = Object.assign({}, person, student);
+// mutate! don't use it if it possible!
+let newPerson = person;
+newPerson.name = "Pol";
+console.log(person.name); //Pol
+console.log(newPerson.name); // Pol
+
+// Use this 
+let newPerson1 = Object.assign({}, person);
+newPerson1.name = 'Paul';
+console.log(person.name); //Pol
+console.log(newPerson1.name); // Pol
+let newPerson2 = Object.assign({}, person, {
+  name: 'Mike'
+});
+console.log(newPerson2);
+
+// destruction
+let arr1 = ['1', '2', '3'];
+let [one, two, three] = arr1;
+
+let arr2 = () => {
+  return [1, 2, 4];
+};
+let [uno, , tres] = arr2();
+let a1, b1, c1 = 9,
+  d1 = 5;
+[a1, b1 = 4] = [2];
+[c1, d1] = [d1, c1];
+
+//destruction object
+let obj1 = {
+  h: 199,
+  w: true
+};
+let {
+  h,
+  w
+} = obj1;
+
+let a2,b2;
+({a2,b2}={a2:'Hello ',b2: 'Jack'});
+
+var obj2={hi1:134,w1:true};
+var {hi1:foo,w1:bar}=obj2; // hi1 calls error and w1 too
+// foo=134, bar=true
+
+var obj3={id3:23,name3:'Max'};
+let {id3=10,age3=20}=obj; // id=10,age=20.
