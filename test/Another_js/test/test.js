@@ -72,3 +72,39 @@ function findSolution(target) {
   }
   return find(1, "1");
 }
+function zeroPad(number, width) {
+  let string = String(number);
+  while (string.length < width) {
+    string = "0" + string;
+  }
+  return string;
+}
+function printFarmInventory(cows, chikens, pigs) {
+  console.log(`${zeroPad(cows, 3)} cows`);
+  console.log(`${zeroPad(chikens, 3)} chikens`);
+  console.log(`${zeroPad(pigs, 3)} pigs`);
+}
+
+function min(a, b) {
+  if (a > b) return b;
+  else return a;
+}
+
+function ezEven(a) {
+  if (a > 0) {
+    if (a == 0) return true;
+    else if (a == 1) return false;
+    else return ezEven(a - 2);
+  } else return null;
+}
+function countBs(string, chars) {
+  let counter = 0;
+  for (let i = 0; i <= string.length - 1; i++) {
+    if (string[i] == chars) counter++;
+  }
+  return counter;
+}
+let arrNew = [1, 2, 3, 4];
+arrNew.pop();
+arrNew.push(5);
+console.log(arrNew);
