@@ -108,3 +108,24 @@ let arrNew = [1, 2, 3, 4];
 arrNew.pop();
 arrNew.push(5);
 console.log(arrNew);
+
+let objectA = {
+  a: 1,
+  b: 2,
+};
+let objC = Object.assign(objectA, { b: 3, c: 4 });
+console.log(objC);
+delete objC.c;
+console.log(objC.c);
+console.log(Object.keys(objC));
+console.log(typeof arrNew);
+objC.c = 3;
+console.log(objC);
+let objA = { value: 10 };
+let objB = objA;
+let objD = { value: 10 };
+
+objB.value = 15;
+console.log(objA, objB);
+objD.value = 15;
+console.log(objA == objD);
