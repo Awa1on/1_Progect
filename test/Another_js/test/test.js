@@ -129,3 +129,31 @@ objB.value = 15;
 console.log(objA, objB);
 objD.value = 15;
 console.log(objA == objD);
+
+let todoList = [];
+function remember(task) {
+  todoList.push(task);
+}
+function getTask(task) {
+  todoList.shift();
+}
+function rememberUrgently(task) {
+  todoList.unshift(task);
+}
+console.log([0, 1, 2, 3, 4, 5].slice(2, 4));
+console.log("кокосы".slice(2, 6)); // 'косы'
+console.log("кокосы".indexOf("сы")); // 4
+console.log("  Hi man\n  ".trim()); // 'Hi man'
+console.log(String(6).padStart(3, "0")); // 006
+console.log("ha".repeat(4)); // hahahaha
+
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+console.log(max(3, 5, 0, -9));
+let numbers = [1, 6, 3];
+console.log(max(...numbers));
