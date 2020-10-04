@@ -16,8 +16,21 @@ even = [i for i in range(20) if i % 2 == 0]
 print(even)
 
 
-def foo(**a):
+def foo(a):
     print(a)
 
 
 foo('Hello World!')
+
+
+class Cat:
+    cat = Cat()
+    cat.name = 'Mike'
+    cat.species = 'British'
+    cat.colour = 'Gray'
+
+    def meow():
+        print('Meow!')
+
+
+Cat.meow()
