@@ -22,15 +22,12 @@ def foo(a):
 
 foo('Hello World!')
 
-
-class Cat:
-    cat = Cat()
-    cat.name = 'Mike'
-    cat.species = 'British'
-    cat.colour = 'Gray'
-
-    def meow():
-        print('Meow!')
+for i in range(1, 11, 2):
+    print(i)
 
 
-Cat.meow()
+def summator(x: int, y: int) -> int:
+    return x+y
+
+
+print(summator(1, 3))
